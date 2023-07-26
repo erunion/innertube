@@ -58,4 +58,13 @@ describe('innertube', () => {
       minItems: 1,
     });
   });
+
+  it('should support not supplying a schema to merge', () => {
+    const schema = z.boolean().default(true);
+    expect(innertube(schema)).toStrictEqual({
+      $schema: 'http://json-schema.org/draft-07/schema#',
+      default: true,
+      type: 'boolean',
+    });
+  });
 });
