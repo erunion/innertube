@@ -1,0 +1,6 @@
+.github/
+.husky/
+test/
+coverage/
+.eslint*
+.prettier*
